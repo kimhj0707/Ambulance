@@ -2,7 +2,14 @@
   "permissions": {
     "allow": [
       "Bash(dir)",
-      "WebFetch(domain:xn--kj0bp58a08dbe.com)"
+      "WebFetch(domain:xn--kj0bp58a08dbe.com)",
+      "Bash(npx create-next-app:*)",
+      "Read(//c/KHJ/**)",
+      "Bash(ren:*)",
+      "Bash(powershell:*)",
+      "Bash(npx:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run dev:*)"
     ],
     "deny": [],
     "ask": []
