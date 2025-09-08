@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir)",
+      "WebFetch(domain:xn--kj0bp58a08dbe.com)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
