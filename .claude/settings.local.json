@@ -9,7 +9,8 @@
       "Bash(powershell:*)",
       "Bash(npx:*)",
       "Bash(npm install:*)",
-      "Bash(npm run dev:*)"
+      "Bash(npm run dev:*)",
+      "mcp__desktop-commander__edit_block"
     ],
     "deny": [],
     "ask": []

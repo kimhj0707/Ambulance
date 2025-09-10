@@ -60,7 +60,7 @@ export default function Header() {
           <div className="hidden md:flex items-center space-x-4">
             <div className="text-right">
               <div className="text-sm text-gray-600">24시간 상담</div>
-              <div className="text-lg font-bold text-red-600">010-9070-9720</div>
+              <div className="text-lg font-bold text-blue-600">010-9070-9720</div>
             </div>
             <Button>
               <Phone className="h-4 w-4 mr-2" />
@@ -103,6 +103,20 @@ export default function Header() {
                   서비스 안내
                 </Link>
                 <Link
+                  href="/assessment"
+                  className="text-gray-600 hover:text-blue-600 transition-colors py-2 font-medium"
+                  onClick={toggleMenu}
+                >
+                  🧠 AI 응급도 평가
+                </Link>
+                <Link
+                  href="/tracking"
+                  className="text-gray-600 hover:text-blue-600 transition-colors py-2"
+                  onClick={toggleMenu}
+                >
+                  실시간 추적
+                </Link>
+                <Link
                   href="/about"
                   className="text-gray-600 hover:text-blue-600 transition-colors py-2"
                   onClick={toggleMenu}
@@ -119,7 +133,7 @@ export default function Header() {
                 <div className="pt-4 border-t border-gray-200">
                   <div className="text-center mb-4">
                     <div className="text-sm text-gray-600">24시간 상담</div>
-                    <div className="text-xl font-bold text-red-600">010-9070-9720</div>
+                    <div className="text-xl font-bold text-blue-600">010-9070-9720</div>
                   </div>
                   <Button className="w-full">
                     <Phone className="h-4 w-4 mr-2" />
