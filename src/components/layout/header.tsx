@@ -43,10 +43,16 @@ export default function Header() {
               서비스 안내
             </Link>
             <Link
-              href="/about"
+              href="/areas"
               className="text-gray-600 hover:text-blue-600 transition-colors"
             >
-              회사 소개
+              지역 서비스
+            </Link>
+            <Link
+              href="/faq"
+              className="text-gray-600 hover:text-blue-600 transition-colors"
+            >
+              자주 묻는 질문
             </Link>
             <Link
               href="/contact"
@@ -54,17 +60,26 @@ export default function Header() {
             >
               상담 신청
             </Link>
+            <Link
+              href="/emergency-check"
+              className="text-red-600 hover:text-red-700 transition-colors font-semibold animate-pulse"
+            >
+              응급체크
+            </Link>
           </nav>
 
           {/* Contact Info & CTA */}
           <div className="hidden md:flex items-center space-x-4">
             <div className="text-right">
               <div className="text-sm text-gray-600">24시간 상담</div>
-              <div className="text-lg font-bold text-blue-600">010-9070-9720</div>
+              <div className="text-2xl font-bold text-red-600 animate-pulse">010-9070-9720</div>
             </div>
-            <Button>
+            <Button 
+              className="bg-red-600 hover:bg-red-700 text-white animate-pulse"
+              onClick={() => window.location.href = 'tel:010-9070-9720'}
+            >
               <Phone className="h-4 w-4 mr-2" />
-              상담받기
+              지금 전화
             </Button>
           </div>
 
@@ -103,25 +118,18 @@ export default function Header() {
                   서비스 안내
                 </Link>
                 <Link
-                  href="/assessment"
-                  className="text-gray-600 hover:text-blue-600 transition-colors py-2 font-medium"
-                  onClick={toggleMenu}
-                >
-                  🧠 AI 응급도 평가
-                </Link>
-                <Link
-                  href="/tracking"
+                  href="/areas"
                   className="text-gray-600 hover:text-blue-600 transition-colors py-2"
                   onClick={toggleMenu}
                 >
-                  실시간 추적
+                  지역 서비스
                 </Link>
                 <Link
-                  href="/about"
+                  href="/faq"
                   className="text-gray-600 hover:text-blue-600 transition-colors py-2"
                   onClick={toggleMenu}
                 >
-                  회사 소개
+                  자주 묻는 질문
                 </Link>
                 <Link
                   href="/contact"
@@ -130,14 +138,25 @@ export default function Header() {
                 >
                   상담 신청
                 </Link>
+                <Link
+                  href="/emergency-check"
+                  className="text-red-600 hover:text-red-700 transition-colors py-2 font-semibold animate-pulse"
+                  onClick={toggleMenu}
+                >
+                  🚨 응급체크
+                </Link>
                 <div className="pt-4 border-t border-gray-200">
-                  <div className="text-center mb-4">
+                  <div className="text-center mb-4 bg-red-50 rounded-lg p-4">
                     <div className="text-sm text-gray-600">24시간 상담</div>
-                    <div className="text-xl font-bold text-blue-600">010-9070-9720</div>
+                    <div className="text-2xl font-bold text-red-600 animate-pulse">010-9070-9720</div>
+                    <div className="text-xs text-red-500">👆 터치하면 바로 연결</div>
                   </div>
-                  <Button className="w-full">
-                    <Phone className="h-4 w-4 mr-2" />
-                    지금 상담받기
+                  <Button 
+                    className="w-full bg-red-600 hover:bg-red-700 text-white animate-pulse"
+                    onClick={() => window.location.href = 'tel:010-9070-9720'}
+                  >
+                    <Phone className="h-4 w-4 mr-2 animate-bounce" />
+                    지금 바로 전화하기
                   </Button>
                 </div>
               </nav>

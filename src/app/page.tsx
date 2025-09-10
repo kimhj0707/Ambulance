@@ -48,9 +48,12 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
-              <div className="flex items-center gap-2 text-2xl font-bold text-blue-600">
-                <Phone className="h-8 w-8" />
-                <span>010-9070-9720</span>
+              <div className="bg-gradient-to-r from-red-500 to-red-600 text-white px-8 py-4 rounded-lg shadow-xl animate-pulse">
+                <div className="flex items-center gap-3 text-3xl font-bold">
+                  <Phone className="h-10 w-10 animate-bounce" />
+                  <span>010-9070-9720</span>
+                </div>
+                <div className="text-sm text-red-100 text-center mt-1">지금 바로 전화하세요</div>
               </div>
               <div className="flex items-center gap-2 text-sm text-gray-600">
                 <Clock className="h-4 w-4" />
@@ -64,25 +67,26 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="mt-10"
             >
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col gap-4 justify-center max-w-md mx-auto">
                 <Button 
                   size="lg" 
-                  className="text-lg px-8 py-3 bg-blue-600 hover:bg-blue-700"
+                  className="text-2xl px-12 py-6 bg-red-600 hover:bg-red-700 shadow-2xl transform hover:scale-105 transition-all duration-200 animate-pulse"
                   onClick={() => window.location.href = 'tel:010-9070-9720'}
                 >
-                  <Phone className="h-5 w-5 mr-2" />
-                  24시간 상담 전화
+                  <Phone className="h-8 w-8 mr-3 animate-bounce" />
+                  지금 바로 전화하기
                 </Button>
-                <Link href="/contact">
-                  <Button 
-                    size="lg"
-                    variant="outline"
-                    className="text-lg px-8 py-3"
-                  >
-                    온라인 상담 신청
-                    <ArrowRight className="h-5 w-5 ml-2" />
-                  </Button>
-                </Link>
+                <div className="text-center text-sm text-gray-600">
+                  ⚡ 응급상황 시 즉시 연결 ⚡
+                </div>
+                <Button 
+                  size="sm"
+                  variant="outline"
+                  className="text-sm px-6 py-2 border-gray-300"
+                  onClick={() => window.location.href = '/contact'}
+                >
+                  온라인 상담 (급하지 않은 경우)
+                </Button>
               </div>
             </motion.div>
           </div>
@@ -133,27 +137,35 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 간단한 CTA */}
-      <section className="py-16 bg-blue-50">
+      {/* 강력한 전화 유도 CTA */}
+      <section className="py-20 bg-gradient-to-r from-red-50 via-orange-50 to-red-50">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">도움이 필요하신가요?</h2>
-          <p className="text-lg text-gray-600 mb-8">
-            전문팀이 24시간 대기 중입니다. 언제든 연락주세요.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="bg-white rounded-xl shadow-2xl p-8 border-4 border-red-200">
+            <h2 className="text-4xl font-bold text-red-600 mb-4">🚨 망설이지 마세요!</h2>
+            <p className="text-xl text-gray-800 mb-2 font-semibold">
+              지금 이 순간도 힘든 상황이신가요?
+            </p>
+            <p className="text-lg text-gray-600 mb-8">
+              10년 경험 전문팀이 <span className="font-bold text-red-600">15분 내</span> 달려갑니다
+            </p>
+            
+            <div className="bg-red-600 text-white p-6 rounded-lg mb-6 animate-pulse">
+              <div className="text-3xl font-bold mb-2">010-9070-9720</div>
+              <div className="text-red-100">👆 터치하면 바로 연결</div>
+            </div>
+            
             <Button 
               size="lg" 
-              className="text-lg px-8 py-3"
+              className="text-2xl px-16 py-6 bg-red-600 hover:bg-red-700 shadow-xl transform hover:scale-105 w-full sm:w-auto"
               onClick={() => window.location.href = 'tel:010-9070-9720'}
             >
-              <Phone className="h-5 w-5 mr-2" />
-              010-9070-9720
+              <Phone className="h-8 w-8 mr-3 animate-bounce" />
+              지금 바로 전화하기
             </Button>
-            <Link href="/contact">
-              <Button variant="outline" size="lg" className="text-lg px-8 py-3">
-                온라인 상담
-              </Button>
-            </Link>
+            
+            <div className="mt-4 text-sm text-gray-500">
+              📞 전화 연결 즉시 전문 상담 | 🚗 평균 15분 내 도착 | 💝 24시간 운영
+            </div>
           </div>
         </div>
       </section>

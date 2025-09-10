@@ -70,14 +70,19 @@ export default function ContactPage() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="mt-8 bg-blue-50 border-2 border-blue-200 rounded-lg p-6 inline-block"
+              className="mt-8 bg-gradient-to-r from-red-500 to-red-600 text-white p-8 rounded-xl shadow-2xl animate-pulse"
             >
-              <div className="text-blue-800 text-sm font-medium mb-2">응급상황 시 즉시 연락</div>
-              <div className="flex items-center gap-2 text-3xl font-bold text-blue-600">
-                <Phone className="h-8 w-8" />
-                <span>010-9070-9720</span>
-              </div>
-              <div className="text-blue-700 text-sm mt-2">24시간 연중무휴</div>
+              <div className="text-red-100 text-sm font-medium mb-2">응급상황 시 즉시 연락</div>
+              <div className="text-5xl font-bold mb-2">010-9070-9720</div>
+              <Button 
+                size="lg" 
+                className="text-2xl px-16 py-6 bg-white text-red-600 hover:bg-red-50 shadow-xl transform hover:scale-105 mt-4"
+                onClick={() => window.location.href = 'tel:010-9070-9720'}
+              >
+                <Phone className="h-8 w-8 mr-3 animate-bounce" />
+                지금 바로 전화하기
+              </Button>
+              <div className="text-red-100 text-sm mt-3">🚗 평균 15분 내 도착 | 📞 24시간 연중무휴</div>
             </motion.div>
           </motion.div>
         </div>
@@ -295,15 +300,24 @@ export default function ContactPage() {
               </div>
               
               <div className="space-y-6">
-                <div className="bg-blue-50 p-6 rounded-lg">
-                  <div className="flex items-center gap-4 mb-4">
-                    <Phone className="h-8 w-8 text-blue-600" />
-                    <div>
-                      <h3 className="text-lg font-semibold text-gray-900">24시간 상담 전화</h3>
-                      <p className="text-blue-600 text-2xl font-bold">010-9070-9720</p>
+                <div className="bg-red-50 border-2 border-red-200 p-8 rounded-xl shadow-lg">
+                  <div className="text-center mb-6">
+                    <div className="text-6xl mb-4">📞</div>
+                    <h3 className="text-2xl font-bold text-red-800 mb-2">24시간 상담 전화</h3>
+                    <div className="bg-red-600 text-white rounded-lg p-4 mb-4">
+                      <p className="text-4xl font-bold">010-9070-9720</p>
+                      <p className="text-red-100 text-sm">👆 터치하면 바로 연결</p>
                     </div>
+                    <Button 
+                      size="lg" 
+                      className="text-xl px-12 py-4 bg-red-600 hover:bg-red-700 mb-4 transform hover:scale-105"
+                      onClick={() => window.location.href = 'tel:010-9070-9720'}
+                    >
+                      <Phone className="h-6 w-6 mr-3 animate-bounce" />
+                      지금 바로 전화하기
+                    </Button>
                   </div>
-                  <p className="text-gray-700">
+                  <p className="text-red-700 text-center">
                     "어떻게 말해야 할지 모르겠어요." 괜찮습니다.<br/>
                     상황만 간단히 말씀해 주시면 저희가 알아서 도와드리겠습니다.
                   </p>
@@ -363,14 +377,18 @@ export default function ContactPage() {
 
               {/* Quick Actions */}
               <div className="mt-8 space-y-4">
-                <Button
-                  size="lg"
-                  className="w-full text-lg"
-                  onClick={() => window.location.href = 'tel:010-9070-9720'}
-                >
-                  <Phone className="h-5 w-5 mr-2" />
-                  지금 전화하기
-                </Button>
+                <div className="bg-red-600 text-white rounded-xl p-6 text-center animate-pulse">
+                  <div className="text-3xl font-bold mb-2">010-9070-9720</div>
+                  <div className="text-red-100 text-sm mb-4">⚡ 응급상황 시 즉시 연결</div>
+                  <Button
+                    size="lg"
+                    className="w-full text-xl py-4 bg-white text-red-600 hover:bg-red-50 font-bold transform hover:scale-105"
+                    onClick={() => window.location.href = 'tel:010-9070-9720'}
+                  >
+                    <Phone className="h-6 w-6 mr-3 animate-bounce" />
+                    지금 바로 전화하기
+                  </Button>
+                </div>
                 
                 <Button
                   variant="outline"
@@ -414,14 +432,25 @@ export default function ContactPage() {
               어떤 상황이든 24시간 언제나 도움을 드릴 준비가 되어 있습니다.
             </p>
             
-            <div className="mt-8 bg-gray-50 rounded-lg p-6 max-w-2xl mx-auto">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3 text-center">이런 마음이시라면 지금 바로 연락하세요</h3>
-              <div className="text-sm text-gray-600 space-y-2">
+            <div className="mt-8 bg-red-50 border-2 border-red-200 rounded-xl p-8 max-w-2xl mx-auto">
+              <h3 className="text-2xl font-bold text-red-800 mb-4 text-center">🚨 이런 마음이시라면 지금 바로 연락하세요</h3>
+              <div className="text-sm text-red-700 space-y-2 mb-6">
                 <p>• "어떻게 병원에 데려가야 할지 막막해요"</p>
                 <p>• "혼자서는 도저히 감당이 안 되요"</p>
                 <p>• "가족이 다칠까봐 무서워요"</p>
                 <p>• "주변에 말하기도 어렵고..."</p>
                 <p>• "이런 상황이 처음이라 어떻게 해야 할지..."</p>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-red-600 mb-3">010-9070-9720</div>
+                <Button 
+                  size="lg" 
+                  className="text-xl px-12 py-4 bg-red-600 hover:bg-red-700"
+                  onClick={() => window.location.href = 'tel:010-9070-9720'}
+                >
+                  <Phone className="h-6 w-6 mr-2" />
+                  망설이지 말고 전화하세요
+                </Button>
               </div>
             </div>
           </motion.div>
